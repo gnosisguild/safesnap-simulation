@@ -1,0 +1,9 @@
+name = "safesnap-simulation"
+main = "src/index.ts"
+compatibility_date = "2024-03-15"
+account_id = "32ad23c951551530b7ec3ecd422861a2"
+
+[vars]
+TENDERLY_USER = "gnosisguild"
+TENDERLY_PROJECT = "safesnap"
+
