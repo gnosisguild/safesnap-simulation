@@ -4,7 +4,7 @@ This project serves as a simple wrapper around Tenderly's Simulation API, enabli
 
 ## Requirements
 
-- Node.js (version especificar)
+- Node.js
 - npm or yarn
 - Cloudflare account
 - Wrangler CLI
@@ -12,6 +12,10 @@ This project serves as a simple wrapper around Tenderly's Simulation API, enabli
 ## Local Development
 
 To run this project locally, you need to install the dependencies and use Wrangler's `dev` command to start the development server.
+
+## Live Deployment
+
+The deployed Cloudflare worker can be accessed at: [https://safesnap-simulation.gnosisguild.workers.dev](https://safesnap-simulation.gnosisguild.workers.dev)
 
 ### Setup
 
@@ -38,6 +42,29 @@ yarn install
 
 ```bash
 wrangler dev
+```
+
+## Simulation Request Example
+
+The following is an example of a simulation body for bundle transactions:
+
+```json
+{
+  "simulations": [
+    {
+      "network_id": "",
+      "from": "",
+      "to": "",
+      "input": "",
+      "value": "",
+      "save": true,
+      "save_if_fails": true,
+      "gas": 8000000,
+      "gas_price": 0,
+      "simulation_type": "full"
+    }
+  ]
+}
 ```
 
 This command starts a local server where you can test your worker. It automatically reloads your worker when you make changes to the source code.
